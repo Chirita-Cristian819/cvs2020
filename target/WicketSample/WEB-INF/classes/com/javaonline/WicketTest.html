@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="CV Upload Page">
+	<meta name="keywords" content="HTML, CSS, Wicket">
+
+    <!-- Titlu-->
+    <title>Incarcare CV-uri</title>
+
+    <!-- Fonturi pentru pagina-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	
+	<link href="css/main.css" rel="stylesheet" media="all">
+    <style>
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* ==========================================================================
+   #Wrapper pagina
+   ========================================================================== */
+.page-wrapper {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: #63738a;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   #Design form
+   ========================================================================== */
+
+.wrapper {
+  margin: auto;
+  max-width: 900px;
+}   
+   
+.card {
+  border-radius: 3px;
+  background: #fff;
+}
+
+.card-6 {
+  background: transparent;
+  background: #fff;
+  position: relative;
+  border: 1px solid #e5e5e5;
+}
+
+.card-6 .card-body {
+  border-bottom: none;
+  padding: 10px 0;
+  padding-bottom: 0;
+}
+
+.card-6 .card-footer {
+  border-top: none;
+  padding: 50px 55px;
+
+}
+
+/* ==========================================================================
+   #Design input-uri form
+   ========================================================================== */
+input,
+textarea {
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.input-group {
+  position: relative;
+  margin: 0;
+}
+
+.input--style-6,
+.textarea--style-6 {
+  background: transparent;
+  line-height: 38px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  color: #666;
+  font-size: 15px;
+  transition: all 0.4s ease;
+  padding: 0 20px;
+}
+
+
+.input--style-6:focus,
+.textarea--style-6:focus {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+
+.label--desc {
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.input-file {
+  display: none;
+}
+
+.input-file + label {
+  font-size: 15px;
+  color: white;
+  
+  line-height: 40px;
+  background-color: #666666;
+  padding: 0 20px;
+  
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.4s ease;
+  
+  cursor: pointer;
+}
+
+.input-file:focus + label,
+.input-file + label:hover {
+  background: #1b1b1b;
+}
+
+.input-file__info {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ==========================================================================
+   #Design coloane form
+   ========================================================================== */
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 24px 55px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-row .name {
+  width: 188px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 11px;
+}
+
+.form-row .value {
+  width: calc(100% - 188px);
+}
+
+.form-row .value2 {
+  width: calc(50% - 188px);
+}
+
+
+/* ==========================================================================
+   #Design Butoane
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 30px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #fff;
+  font-family: inherit;
+}
+
+.btn--radius-2 {
+  border-radius: 5px;
+}
+
+.btn--red {
+  background: #f04500;
+}
+
+.btn--red:hover {
+  background: #e03022;
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark" style="padding-top: 150px; padding-bottom: 50px">
+        <div class="wrapper">
+			<form id = "form_login" wicket:id = "WicketTestForm">
+            <div class="card card-6">
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-row">
+                            <div class="name" wicket:id = "Nume">Nume</div>
+                            <div class="value2">
+                                <input class="input--style-6" type="text" name="nume" wicket:id = "NameField">
+                            </div>
+							<div class="name" style="text-indent:2em" wicket:id = "Prenume">Prenume</div>
+                            <div class="value2">
+                                <input class="input--style-6" type="text" name="prenume" wicket:id = "SurnameField">
+                            </div>
+                        </div>
+						<div class="form-row">
+                            <div class="name" wicket:id = "Telefon">Telefon</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="telefon" wicket:id = "PhoneNumber">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name" wicket:id = "Email">Adresa Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="email" name="email" placeholder="adresa@domeniu.com" wicket:id = "EmailField">
+                                </div>
+                            </div>
+                        </div>
+						
+						
+                       
+                        <div class="form-row">
+                            <div class="name">Incarcare CV</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file" accept=".doc,.docx, .pdf" wicket:id = "CVUpload"/>
+                                    <label for="file">Alege fisier</label>
+                                    <label class="input-file__info" wicket:id = "FileLabel">Nici o selectie</label>
+                                </div>
+                                <div class="label--desc" >CV-ul trebuie sa aiba unul dintre formatele .doc, .docx, .pdf</div>
+                            </div>
+                        </div>
+						
+                    </form>
+                </div>
+				
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--red" type="submit" wicket:id = "Submit">Aplica</button>
+                </div>
+				
+            </div>
+			</form>
+        </div>
+    </div>
+
+</body>
+
+</html>

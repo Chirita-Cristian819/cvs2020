@@ -1,0 +1,193 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* ==========================================================================
+   #Wrapper pagina
+   ========================================================================== */
+.page-wrapper {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: #63738a;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   #Design form
+   ========================================================================== */
+
+.wrapper {
+  margin: auto;
+  max-width: 900px;
+}   
+   
+.card {
+  border-radius: 3px;
+  background: #fff;
+}
+
+.card-6 {
+  background: transparent;
+  background: #fff;
+  position: relative;
+  border: 1px solid #e5e5e5;
+}
+
+.card-6 .card-body {
+  border-bottom: none;
+  padding: 10px 0;
+  padding-bottom: 0;
+}
+
+.card-6 .card-footer {
+  border-top: none;
+  padding: 50px 55px;
+
+}
+
+/* ==========================================================================
+   #Design input-uri form
+   ========================================================================== */
+input,
+textarea {
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.input-group {
+  position: relative;
+  margin: 0;
+}
+
+.input--style-6,
+.textarea--style-6 {
+  background: transparent;
+  line-height: 38px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  color: #666;
+  font-size: 15px;
+  transition: all 0.4s ease;
+  padding: 0 20px;
+}
+
+
+.input--style-6:focus,
+.textarea--style-6:focus {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+
+.label--desc {
+  font-size: 13px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.input-file {
+  display: none;
+}
+
+.input-file + label {
+  font-size: 15px;
+  color: white;
+  
+  line-height: 40px;
+  background-color: #666666;
+  padding: 0 20px;
+  
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.4s ease;
+  
+  cursor: pointer;
+}
+
+.input-file:focus + label,
+.input-file + label:hover {
+  background: #1b1b1b;
+}
+
+.input-file__info {
+  font-size: 15px;
+  color: #666;
+}
+
+/* ==========================================================================
+   #Design coloane form
+   ========================================================================== */
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 24px 55px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-row .name {
+  width: 188px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 11px;
+}
+
+.form-row .value {
+  width: calc(100% - 188px);
+}
+
+.form-row .value2 {
+  width: calc(50% - 188px);
+}
+
+
+/* ==========================================================================
+   #Design Butoane
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 30px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #fff;
+  font-family: inherit;
+}
+
+.btn--radius-2 {
+  border-radius: 5px;
+}
+
+.btn--red {
+  background: #f04500;
+}
+
+.btn--red:hover {
+  background: #e03022;
+}
